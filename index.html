@@ -492,9 +492,55 @@ footer p{
 
 @media(max-width:850px){
 
-  .links{
-    display:flex;
-  }
+
+
+    .links{
+        display:flex !important;
+        flex-direction:column;
+        width:100%;
+        gap:12px;
+        overflow:visible;
+    }
+
+    .main-links{
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap:8px;
+        width:100%;
+    }
+
+    .main-links a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:8px 5px;
+        font-size:12px;
+        white-space:normal;
+        text-align:center;
+    }
+
+    .social-links{
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        gap:7px;
+        width:100%;
+    }
+
+    .social-links .social{
+        display:flex !important;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+        padding:8px 4px;
+        font-size:11px;
+        white-space:nowrap;
+    }
+
+    .social-links .social i{
+        font-size:16px;
+    }
+
+}
 
   .hero{
     min-height:auto;
@@ -619,7 +665,7 @@ footer p{
   }
  }
     </style>
-    
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
   
   
 </head>
@@ -633,14 +679,51 @@ footer p{
     </a>
 
     <nav class="links">
-      <a href="#treatments">Treatments</a>
-      <a href="#results">Results</a>
-      <a href="#journey">Your Journey</a>
-      <a href="#faq">FAQ</a>
-   <a class="social instagram" href="https://www.instagram.com/be.smile.marrakech" target="_blank">Instagram</a>
-<a class="social tiktok" href="https://www.tiktok.com/@be.smile.marrakech" target="_blank">TikTok</a>
-   <a class="social facebook" href="https://www.facebook.com/share/1F4kUzg9vA/" target="_blank">Facebook</a>
-  </nav>
+
+    <div class="main-links">
+        <a href="#treatments">Treatments</a>
+        <a href="#results">Results</a>
+        <a href="#journey">Your Journey</a>
+        <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="social-links">
+
+        <a class="social instagram"
+           href="https://www.instagram.com/be.smile.marrakech"
+           target="_blank"
+           aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <a class="social tiktok"
+           href="https://www.tiktok.com/@be.smile.marrakech"
+           target="_blank"
+           aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+
+        <a class="social facebook"
+           href="https://www.facebook.com/share/1F4kUzg9vA/"
+           target="_blank"
+           aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+
+        <a class="social whatsapp"
+           href="https://wa.me/212703176672"
+           target="_blank"
+           aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+    </div>
+
+    </nav>
     <a class="nav-btn" href="https://wa.me/212703176672">
       WhatsApp
     </a>
