@@ -271,27 +271,40 @@ h2{
   padding:30px;
   transition:.25s;
 }
-.payment-services{
-  gap:15px;
+.payment-list{
+  max-width:850px;
+  margin:0 auto;
+  display:grid;
+  gap:10px;
 }
 
-.payment-card{
-  padding:20px;
+.payment-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 18px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
 }
 
-.payment-card .icon{
-  font-size:28px;
-  margin-bottom:10px;
+.payment-icon{
+  font-size:25px;
+  width:35px;
+  text-align:center;
+  flex-shrink:0;
 }
 
-.payment-card h3{
-  font-size:20px;
-  margin-bottom:8px;
+.payment-item strong{
+  color:#fff;
+  font-size:16px;
+  margin-right:5px;
 }
 
-.payment-card p{
+.payment-item span{
+  color:var(--muted);
   font-size:14px;
-  }
+}
 .card:hover{
   transform:translateY(-5px);
   border-color:rgba(57,189,248,.4);
@@ -1034,31 +1047,39 @@ footer p{
     <p>Choose the payment option that works best for you.</p>
   </div>
 
-  <div class="services payment-services">
+  <div class="payment-list">
 
-    <article class="card payment-card">
-      <div class="icon">💵</div>
-      <h3>Cash</h3>
-      <p>Cash payment is available.</p>
-    </article>
+    <div class="payment-item">
+      <div class="payment-icon">💵</div>
+      <div>
+        <strong>Cash:</strong>
+        <span>Cash payment is available.</span>
+      </div>
+    </div>
 
-    <article class="card payment-card">
-      <div class="icon">💳</div>
-      <h3>Credit / Debit Card</h3>
-      <p>Secure card payment is available.</p>
-    </article>
+    <div class="payment-item">
+      <div class="payment-icon">💳</div>
+      <div>
+        <strong>Credit / Debit Card:</strong>
+        <span>Secure card payment is available.</span>
+      </div>
+    </div>
 
-    <article class="card payment-card">
-      <div class="icon">🏦</div>
-      <h3>Bank Transfer</h3>
-      <p>Bank transfer can be arranged.</p>
-    </article>
+    <div class="payment-item">
+      <div class="payment-icon">🏦</div>
+      <div>
+        <strong>Bank Transfer:</strong>
+        <span>Bank transfer can be arranged.</span>
+      </div>
+    </div>
 
-    <article class="card payment-card">
-      <div class="icon">💻</div>
-      <h3>PayPal</h3>
-      <p>Pay securely through PayPal.</p>
-    </article>
+    <div class="payment-item">
+      <div class="payment-icon">💻</div>
+      <div>
+        <strong>PayPal:</strong>
+        <span>Pay securely through PayPal.</span>
+      </div>
+    </div>
 
   </div>
 
